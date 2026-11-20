@@ -20,4 +20,3 @@ async function transact(mode, action) {
 }
 export const getResults = () => transact('readonly', store => store.getAll());
 export const saveResult = result => transact('readwrite', store => store.add(result));
-export const clearResults = () => transact('readwrite', store => store.clear());
